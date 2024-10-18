@@ -1,31 +1,34 @@
 // DESAFIO DIO
 // Jornada do Herói - XP
 
+const PromptSync = require('prompt-sync'); // O comando prompt-sync para permitir que o usuário faça a inserção de dados pelo terminal do VSCode
+
 // Criando as variáveis a serem utilizadas
-let nome_Heroi = '';
+let nome_Heroi = 'Henrique';
 let xp_Heroi = 0;
 let nivel_Heroi = '';
 let inimigosDerrotados;
 const xp_Inimigo = 900;
 let qtdInimigos;
+const prompt = PromptSync();
 
-//Inserindo o nome do herói
+// //Inserindo o nome do herói
 nome_Heroi = prompt('Digite o nome do seu herói: ');
 
 // inserção de XP
-inimigosDerrotados = prompt('Os inimigos foram derrotados?');
-qtdInimigos = parseInt(prompt('Quantidade de inimigos derrotados'));
+inimigosDerrotados = prompt('Os inimigos foram derrotados? ');
+qtdInimigos = parseInt(prompt('Quantidade de inimigos derrotados '));
 
 // Se os inimigos forem derrotados, a variável é validada o herói ganha XP. Se não, o combate se encerra.
 
-if (inimigosDerrotados === 'Sim') {
-  inimigosDerrotados = true;
+if (inimigosDerrotados === "Sim") {
   xp_Heroi = xp_Inimigo * qtdInimigos; // a quantidade de XP ganha do herói será igual à XP base do inimigo multiplicada por quantos ele derrotou
   console.log(xp_Heroi);
   inimigosDerrotados = true;
 } else {
-  inimigosDerrotados = false;
-}
+      qtdInimigos = 0;
+      console.log("Você foi derrotado! Tente novamente! ");
+      inimigosDerrotados = false}
 
 // Rankeamento do nível do herói de acordo com o valor da variável xp_Heroi
 do {
@@ -49,5 +52,3 @@ do {
 } while (inimigosDerrotados === 'true');
 
 console.log('O herói de nome ' + nome_Heroi + ' está no nível de ' + nivel_Heroi);
-// Aplicando a saída na tela
-document.getElementById('niveldoheroi').innerHTML = 'O herói ' + nome_Heroi + ' está no nível ' + nivel_Heroi;
