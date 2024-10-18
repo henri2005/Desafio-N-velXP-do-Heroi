@@ -22,6 +22,7 @@ if (inimigosDerrotados === 'Sim') {
   inimigosDerrotados = true;
   xp_Heroi = xp_Inimigo * qtdInimigos; // a quantidade de XP ganha do herói será igual à XP base do inimigo multiplicada por quantos ele derrotou
   console.log(xp_Heroi);
+  inimigosDerrotados = true;
 } else {
   inimigosDerrotados = false;
 }
