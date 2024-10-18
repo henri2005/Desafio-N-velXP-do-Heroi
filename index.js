@@ -1,7 +1,7 @@
 // DESAFIO DIO
 // Jornada do Herói - XP
 
-const PromptSync = require('prompt-sync'); // O comando prompt-sync para permitir que o usuário faça a inserção de dados pelo terminal do VSCode
+const PromptSync = require('prompt-sync'); // A constante prompt-sync para permitir que o usuário faça a inserção de dados pelo terminal do VSCode, pelo pacote prompt-sync
 
 // Criando as variáveis a serem utilizadas
 let nome_Heroi = 'Henrique';
